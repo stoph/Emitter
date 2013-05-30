@@ -18,7 +18,7 @@ class Emitter
 	{
 		if (isset($this->events[$event])) {
 			foreach ($this->events[$event] as $event) {
-				call_user_func_array($event, $args);
+				call_user_func($event, $args);
 			}
 		}
 	}
